@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               url: UrlHelper.VEKOAPPEN,
                               description: "The app for the Ekstremsportveko festival."
                                   "With this app you will get an overview of the program, where the events are in Voss area. "
-                                  "It will also inform you about new changes in the program through out the festival. "
+                                  "It will also inform you about new changes in the program through out the festival."
                                   "Create your of Favorite program and attend as much fun as possible."
                           )
                           ),
