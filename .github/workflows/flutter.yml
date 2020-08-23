@@ -1,4 +1,4 @@
-name: Dart CI
+name: Flutter CI
   
 on:
   push:
@@ -17,7 +17,8 @@ jobs:
     steps:
       - name: setup-flutter
         uses:  takuyaohashi/setup-flutter@v1
-        
+        with:
+          channel: master 
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: flutter pub get
