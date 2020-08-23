@@ -41,12 +41,64 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
   }
+  UrlHelper _urlHelper = UrlHelper();
+
+  Future<void> _showInfoDialog() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('About kefo.no'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('Kenneth is a MsC student @ UiB, that does appdev on his spare time'),
+                Text(''),
+                Text('Would you like to contact me about opportunites?'),
+                Text(''),
+                RaisedButton(
+                  child: Text("Email me"),
+                  onPressed: () {
+                    _urlHelper.launchURL("mailto:kenneth@kefo.no");
+                  },
+                )
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          color: Colors.white,
+          icon: Icon(Icons.wifi_tethering),
+          onPressed: () {
+
+          },
+        ),
         backgroundColor: Colors.blueGrey,
+        actions: [
+          IconButton(icon: Icon(
+              Icons.info_outline),
+              color: Colors.white,
+              onPressed: () {
+                _showInfoDialog();
+              })
+        ],
       ),
       body: ListView(
         children: [
