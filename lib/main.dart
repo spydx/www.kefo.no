@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:www_kefo_no/models/projectmodel.dart';
 
 import 'package:www_kefo_no/services/assetshelper.dart';
 import 'package:www_kefo_no/services/customtheme.dart';
 import 'package:www_kefo_no/services/contanthelper.dart';
 import 'package:www_kefo_no/services/urlhelper.dart';
+import 'package:www_kefo_no/widgets/projecttile.dart';
 import 'package:www_kefo_no/widgets/somebuttons.dart';
 
 void main() {
@@ -44,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       // backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueGrey,
       ),
       body: Center(
             child: Column(
@@ -112,13 +114,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 // menu
                 Flexible(
                     child: Container(
-                      //color: Colors.green,
+                      color: Colors.green,
+                      child: Column(
+                        children: [
+                          ProjectTile(ProjectModel(name: "VekoAppen")),
+                        ],
+                      ),
                     )
                 ),
                 Flexible(
                   flex: 2,
                     child: Container(
-                      //color: Colors.blue,
+                      color: Colors.blue,
                     ))
               ]
             )
