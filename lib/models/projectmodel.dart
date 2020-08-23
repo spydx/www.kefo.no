@@ -1,9 +1,9 @@
 class ProjectModel {
   String url;
   String name;
-  int year;
+  String year;
   String description;
   String img;
 
-  ProjectModel({this.name});
+  ProjectModel({this.name, this.url, this.img, this.description, this.year});
 }

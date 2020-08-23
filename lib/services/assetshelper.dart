@@ -7,4 +7,5 @@ class AssetsHelper {
   static const MEDIUM = 'assets/some/medium.png';
   static const TWITTER = 'assets/some/twitter.png';
   static const KEFO = 'assets/kefo.png';
+  static const VEKO = 'assets/veko.png';
 }

@@ -48,88 +48,106 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
       ),
-      body: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // header
-                Flexible(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Container(
-                        child: Image(
-                          image: Image.asset(AssetsHelper.KEFO).image,
-                        ),
-                      ),
-                    )
-                ),
-                // body
-                Flexible(
-                  flex: 3,
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 40,
+      body: ListView(
+        children: [
+          Center(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // header
+                    Flexible(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Center(
+                            child: Container(
+                              height: 200,
+                              child: Image(
+                                image: Image.asset(AssetsHelper.KEFO).image,
+                              ),
                             ),
-                            SomeButtons(AssetsHelper.GITHUB, UrlHelper.GITHUB),
-                            SomeButtons(AssetsHelper.MEDIUM, UrlHelper.MEDIUM),
-                            SomeButtons(AssetsHelper.LINKEDIN, UrlHelper.LINKEDIN),
-                          ],
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: Image.asset(AssetsHelper.AVATAR).image,
-                              radius: 100,
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(widget.title, textScaleFactor: 3,),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 40,
-                            ),
-                            SomeButtons(AssetsHelper.FACEBOOK, UrlHelper.FACEBOOK),
-                            SomeButtons(AssetsHelper.INSTAGRAM, UrlHelper.INSTAGRAM),
-                            SomeButtons(AssetsHelper.TWITTER, UrlHelper.TWITTER),
-                          ],
-                        ),
-                      ],
+                          ),
+                        )
                     ),
-                  ),
-                ),
-                // menu
-                Flexible(
-                    child: Container(
-                      color: Colors.green,
-                      child: Column(
+                    // body
+                    Flexible(
+                      flex: 3,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 40,
+                                ),
+                                SomeButtons(AssetsHelper.GITHUB, UrlHelper.GITHUB),
+                                SomeButtons(AssetsHelper.MEDIUM, UrlHelper.MEDIUM),
+                                SomeButtons(AssetsHelper.LINKEDIN, UrlHelper.LINKEDIN),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage: Image.asset(AssetsHelper.AVATAR).image,
+                                  radius: 100,
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(widget.title, textScaleFactor: 3,),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 40,
+                                ),
+                                SomeButtons(AssetsHelper.FACEBOOK, UrlHelper.FACEBOOK),
+                                SomeButtons(AssetsHelper.INSTAGRAM, UrlHelper.INSTAGRAM),
+                                SomeButtons(AssetsHelper.TWITTER, UrlHelper.TWITTER),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    // menu
+                    Flexible(
+                      flex: 2,
+                      child: Center(child: Column(
                         children: [
-                          ProjectTile(ProjectModel(name: "VekoAppen")),
+                          Text("Projects",
+                            textScaleFactor: 3,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          ProjectTile(ProjectModel(
+                              name: "VekoAppen",
+                              year: "2020",
+                              img: AssetsHelper.VEKO,
+                              url: UrlHelper.VEKOAPPEN,
+                              description: "The app for the Ekstremsportveko festival."
+                                  "With this app you will get an overview of the program, where the events are in Voss area. "
+                                  "It will also inform you about new changes in the program through out the festival. "
+                                  "Create your of Favorite program and attend as much fun as possible."
+                          )
+                          ),
                         ],
+                      )
                       ),
                     )
-                ),
-                Flexible(
-                  flex: 2,
-                    child: Container(
-                      color: Colors.blue,
-                    ))
-              ]
-            )
-        ),
+                  ]
+              )
+          ),
+        ],
+      )
        // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
