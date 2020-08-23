@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SomeButtons extends StatelessWidget{
-  String imgPath;
-  String url;
+  final String imgPath;
+  final String url;
 
   SomeButtons(this.imgPath, this.url);
 
