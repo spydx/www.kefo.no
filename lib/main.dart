@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+       // backgroundColor: Colors.blueGrey,
       ),
       body: Center(
             child: Column(
@@ -112,13 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 // menu
                 Flexible(
                     child: Container(
-                      color: Colors.green,
+                      //color: Colors.green,
                     )
                 ),
                 Flexible(
                   flex: 2,
                     child: Container(
-                      color: Colors.blue,
+                      //color: Colors.blue,
                     ))
               ]
             )
