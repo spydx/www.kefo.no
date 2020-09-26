@@ -1,4 +1,16 @@
+import 'package:url_launcher/url_launcher.dart';
+
 class UrlHelper {
+  UrlHelper();
+
+  launchURL(var url) async {
+    if (await canLaunch(url)) {
+       await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   static const String FACEBOOK = "https://www.facebook.com/kenneth.fossen";
   static const String TWITTER = "https://twitter.com/xdyps";
   static const String INSTAGRAM = "https://instagr.am/spydx";

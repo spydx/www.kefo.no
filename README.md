@@ -1,5 +1,8 @@
 # www.kefo.no
 
+![Flutter CI](https://github.com/spydx/www_kefo_no/workflows/Flutter%20CI/badge.svg)
+
+---
 A personal webpage in Flutter.
 
 Nothing fansy or complicated.

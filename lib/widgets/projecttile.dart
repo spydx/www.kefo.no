@@ -79,7 +79,7 @@ class ProjectTile extends StatelessWidget{
                                     TextSpan(
                                         text:p.description),
                                     overflow: TextOverflow.clip,
-                                    maxLines: 5,
+                                    maxLines: 7,
                                   ),
                                 ),
                               ),

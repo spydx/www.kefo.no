@@ -34,7 +34,7 @@ lightTheme(context) {
         buttonColor: Colors.white,
         splashColor: Colors.white),
     appBarTheme: AppBarTheme(
-      elevation: 0.0,
+      elevation: 5.0,
     ),
   );
 }

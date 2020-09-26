@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher.dart';
+import 'package:www_kefo_no/services/urlhelper.dart';
 
 class SomeButtons extends StatelessWidget{
   final String imgPath;
   final String url;
 
   SomeButtons(this.imgPath, this.url);
-
-  _launchURL(var url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+  UrlHelper _urlHelper = UrlHelper();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +21,7 @@ class SomeButtons extends StatelessWidget{
               .image,
         ),
         onPressed: () {
-          _launchURL(url);
+         _urlHelper.launchURL(url);
         },
       ),
     );
