@@ -30,6 +30,7 @@
 .pub-cache/
 .pub/
 /build/
+!build/web
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -54,7 +55,12 @@ app.*.map.json
 .packages
 .pub-cache/
 .pub/
-build/
+!build
+build/*
+!build/web
+build/web/.*
+
+
 lib/generated_plugin_registrant.dart
 
 # Android related
